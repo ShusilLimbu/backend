@@ -7,3 +7,6 @@ app.use(cors({
     credentials:true,
     optionsSuccessStatus:200
 }))
+app.use(express.json({limit:"16kb"}))
+app.use(express.urlencoded({extended:trued,limit:"16kb"}))
+app.use(express.static("public"))
